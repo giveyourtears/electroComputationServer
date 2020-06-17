@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+mypy = "*"
+sqlalchemy-stubs = "*"
+pyinstaller = "*"
+
+[packages]
+psycopg2 = "*"
+sqlalchemy = "*"
+alembic = "*"
+schedule = "*"
+pyyaml = "*"
+pymssql = "<3.0"
+pytz = "*"
+pypika = "*"
+mypy = "*"
+pendulum = "*"
+
+[requires]
+python_version = "3.7"

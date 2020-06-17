@@ -1,0 +1,55 @@
+# строки соединения с БД АСКУЭ региональных объектов
+DB_ASKUE_REGION :
+    main_db: 'mssql+pymssql://emax:tools@DBSRVSAU2/emax'
+    data_db: 'mssql+pymssql://emax:tools@DBSRVSAU2/emax_data'
+
+# строки соединения с БД АСКУЭ распределительной сети
+DB_ASKUE_RS:
+    main_db: 'postgresql+psycopg2://postgres:poster123!@#@10.32.18.41/dn_emax'
+    data_db: 'postgresql+psycopg2://postgres:poster123!@#@10.32.18.41/dn_emax_data'
+
+# расписания запуска задания расчета балансов
+SCHEDULE_BALANS:
+    - '00:15'
+    - '01:15'
+    - '02:15'
+    - '03:15'
+    - '04:15'
+    - '05:15'
+    - '06:15'
+    - '07:15'
+    - '08:15'
+    - '09:15'
+    - '10:15'
+    - '11:15'
+    - '12:15'
+    - '13:15'
+    - '14:15'
+    - '15:15'
+    - '16:15'
+    - '17:15'
+    - '18:15'
+    - '19:15'
+    - '20:15'
+    - '21:15'
+    - '22:15'
+    - '23:15'
+
+# настройки логирования
+LOGGING:
+    file_name: 'app/storage/logs/askue_rs_balans.log'
+    backupCount: 30
+    level: 'DEBUG'
+    format: '%(asctime)s %(levelname)s %(name)s: %(message)s [in %(pathname)s:%(lineno)d]'
+
+# Часовой пояс
+TIME_ZONE: 'Europe/Minsk'
+
+# Глубина пересчета данных (в сутках)
+BALANCE_RECALC_DEEP: 30
+
+# Строка соединения с БД витрин данных
+DB_DATA_MART: 'postgresql+psycopg2://developer:developer@${DEV_PG_HOST}/askue_rs_test'
+# Строка соединения с БД информационной базой данных АСКУЭ
+DB_IS_ASKUE: 'postgresql+psycopg2://developer:developer@${DEV_PG_HOST}/is_askue_rs'
+
